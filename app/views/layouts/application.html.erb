@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AnabtaTec Mobile - Ruby on Rails, HTML5, CSS3, PHP, iOS, JqueryMobile, Android, Advanced IT Infrastructure.- Front &amp; Back End Development </title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<meta name="description" content="Ruby on Rails - HTML5 - CSS3 .- Front &amp; Back End Development ">
+	<meta name="keywords" content="AnabtaTec Mobile - Ruby on Rails, HTML5, CSS3, PHP, iOS, JqueryMobile, Android, Advanced IT Infrastructure.- Front &amp; Back End Development ">
+	<meta name="author" content="www.anabtatec.com">
+	<meta name="google-site-verification" content="0xJbRrQShqQTtO6wT9C_enAKksYzjR2FR2lxRRWRoo8" />
+ <meta name="googlebot" content="index, follow"/>
+  <meta name="robots" content="index, follow"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="/assets/html5.js"></script>
+		<script src="/assets/css3-mediaqueries.js"></script>
+	<![endif]-->
+	<link href='http://anabtatec.com/favicon.ico' rel='icon' type='image/x-icon'/>
+	<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        maxwidth: 962,
+        namespace: "centered-btns"
+      });
+    });
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37907754-2', 'anabtatec.com');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<%= render "layouts/header" %>
+<%= yield %>
+<%= render "layouts/footer" %>
+</body>
+</html>
