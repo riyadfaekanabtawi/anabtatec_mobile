@@ -1,38 +1,59 @@
 
+<body>
 
+
+<section class="featured">
+
+
+      <li><img src="/assets/earth.png"/></li>
+ 
+ 
+</section>
+      
 <section id="content">
   <div class="zerogrid block">  
     <div class="row block04">
       <div class="col16">
         <section>
-          <p>Home >> Blog</p>
+          <p>Home >> About</p>
         </section>
       </div>
     </div>
     
     <div class="row block05">
       <div id="main-content" class="col-2-3">
-        <% @blogs.each do |blog| %>
         <article>
-          <div class="heading">
-            <h2><a href=""><%= blog.post %></a></h2>
-            <div class="info">Posted by <%= blog.yourname %>  | <%= link_to 'Show Post', blog %> | <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-          </div>
+         
           <div class="content">
-            
-            <p><%= blog.content %></p>
+            <img src="/assets/slide1.jpg" />
+            <p>AnabtaTec is an Brazilian-Argentinian based outsourcing and software firm offering extended IT solutions and helping our clients reduce Time To Market (TTM) and enhance Return On Investment (ROI). Spezialazing in Ruby on Rails, iOS, Android, PHP, HTML5 and CSS3 Development.</p>
+            <p>Since 2009, we have been servicing startups, SMEs, web design/development and IT consulting firms across the globe. Today, we are a 150+ people company.</p>
+
+            <p>Trust, pride in what we do and teamwork form the tenets of our culture. Having worked with clients across different geographies and industry verticals has enabled us to perfect our delivery model to offer world class quality.</p>
+
+            <p>For our clients, it is not about finding a software outsourcing vendor, but about having a trusted development partner who can deliver and help them succeed. Our processes are client driven and we assimilate our clients delivery, quality and measurement processes into our own.</p>
+
+             <p>We constantly improvise on our processes to enhance our service standards to exceed customer expectations, always.</p>
+
+   
+
+              <p> Contact us today to learn more about how we can help your business grow.</p>
+
           </div>
         </article>
-         <% end %>
-        <%= link_to 'Write New Post', new_blog_path %>
-
+       
       </div>
       <div id="sidebar" class="col-1-3">
         <section>
-          <div class="heading"><h2>About us</h2></div>
+          <div class="heading"><h2>Other Services</h2></div>
           <div class="content">
-            <img src="/assets/thumb2.jpg" />
-            <p align="justify">AnabtaTec is an Brazilian-Argentinian based outsourcing and software firm offering extended IT solutions and helping our clients reduce Time To Market (TTM) and enhance Return On Investment (ROI). Spezialazing in Ruby on Rails, iOS, Android, PHP, HTML5 and CSS3 Development.</p>
+            <img src="/assets/services.png" />
+            <p align="justify"><li>Advanced IT Linux Infrastructure</li>
+              <li>CISCO Networking</li>
+              <li>Network Administration</li>
+              <li>Linux Servers</li>
+
+            </p>
           </div>
         </section>
         <section>
@@ -64,22 +85,8 @@
   </div>
 </section>
 
-  <!-- <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.post %></td>
-        <td><%= blog.yourname %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
--->
 
 
+</body>
 
 

@@ -1,19 +1,24 @@
 class ContactController < ApplicationController
-  include SimpleCaptcha::ControllerHelpers
-def index
-end
-def new
-   @message = Message.new
-end
-def create
-   @message = Message.new(params[:message])
-   if @message.save &amp;&amp; simple_captcha_valid?
-      redirect_to(root_path, :notice =&gt; "Message was successfully sent.")
-   else
-      flash.now.alert = "Required fields or secret code was invalid!"
-      render :new
-   end
-end
+
+  def new
+    @contact = Contact.new
+  end
+  def create
+    @contact = Contact.new(contact_params)
+
+    respond_to do |format|
+      if @contact.save
+        format.html { redirect_to @contact, notice: 'Email was succesfully sent.' }
+        format.json { render action: 'show', status: :created, location: @contact }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  def contact_params
+      params.require(:contact).permit(:fullname, :email, :subject, :message, :phone, :country )
+    end
 end
 
 

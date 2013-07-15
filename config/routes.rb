@@ -1,19 +1,22 @@
 AnabtaTecMobile::Application.routes.draw do
-  get "contact/new"
+  
+
   resources :blogs
   resources :home
+
+  resources :contacts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+ root :to => 'home#index'
 
-  # Example of regular route:
+# Example of regular route:
  get 'blogs/' => 'blogs#index'
- get 'about/' => 'about#index' 
- get 'products/' => 'products#index'
-  get 'contact/' => 'contact#new'
+ get 'about/' => 'home#about'
+ get 'contact/new' => 'contact#new'
+ get 'gallery/' => 'home#gallery'
 
 
 

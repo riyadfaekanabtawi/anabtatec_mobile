@@ -1,0 +1,44 @@
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div align="center" id="error_explanation">
+      <h2 align="center"><%= pluralize(@contact.errors.count, "error") %> prohibited this message from being sent:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div align="left" style="background:#000; border-radius:10px;">
+  <div style="color:#FF4500;" align="center" class="field">
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname %>
+  </div>
+  <div style="color:#FF4500;" align="center" class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div style="color:#FF4500;"  align="center"class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+   <div style="color:#FF4500;"  align="center"class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+   <div style="color:#FF4500;"  align="center"class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+   <div style="color:#FF4500;"  align="center"class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <br><br>
+  <div style="color:#FF4500;" align="center" class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
+<% end %>
+
